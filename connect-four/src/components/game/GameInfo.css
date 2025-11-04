@@ -1,0 +1,75 @@
+.game-info {
+  text-align: center;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.status-message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  min-height: 2rem;
+  padding: 15px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(199, 210, 254, 0.1));
+  border-radius: 15px;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.1);
+}
+
+.player-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.player-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 25px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  background: rgba(139, 92, 246, 0.05);
+  border: 2px solid transparent;
+  min-width: 120px;
+}
+
+.player-indicator.active {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(199, 210, 254, 0.1));
+  border-color: #8b5cf6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.2);
+}
+
+.token {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.token::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), transparent 70%);
+  border-radius: 50%;
+}
+
+.player-indicator span {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
